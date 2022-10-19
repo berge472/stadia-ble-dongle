@@ -1,16 +1,6 @@
-ESP-IDF template app
+stadia-ble-dongle
 ====================
 
-This is a template application to be used with `Espressif IoT Development Framework <https://github.com/espressif/esp-idf>`_.
+This project contains the source code for firmware to convert a USB HID device to a BLE HID device. The main purpose is to allow wireless use of stadia controllers. 
 
-Please check `ESP-IDF docs <https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html>`_ for getting started instructions.
-
-This is a fork of `espressif/esp-idf-template <https://github.com/espressif/esp-idf-template>`_ with a devcontainer added. 
-
-|
-
-*Code in this repository is in the Public Domain (or CC0 licensed, at your option.)
-Unless required by applicable law or agreed to in writing, this
-software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied.*
-
+The initial proof of concept will target the `TinyS3 ESP32-S3 development board <https://www.amazon.com/gp/product/B09X259SDP>`_ , If that goes well, I will spin a custom PCB with a smaller (and hopefully more practical) form factor.
