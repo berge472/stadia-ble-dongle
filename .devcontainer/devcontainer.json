@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/docker-existing-dockerfile
+{
+	"name": "ESP32 Dev",
+
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	"context": ".",
+
+	
+	//User prebuilt image from dockerhub
+	"image": "uprev/esp32:4.3.1",
+
+
+	// OR Build locally
+    // "build": {
+    //     "dockerfile": "Dockerfile",
+    //     "args": {
+    //         "IDF_CLONE_BRANCH_OR_TAG":"v4.3.1"
+    //     }
+    // },
+
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": ["ms-vscode.cpptools","redhat.vscode-yaml","ms-vscode.cmake-tools"],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	"postCreateCommand": ". /opt/esp/idf/export.sh",
+
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Uncomment to use USB device inside of container for flash/debug (only works on linux host)
+	//"mounts": ["type=bind,source=/dev,target=/dev"],
+
+	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	//"remoteUser": "dev"
+}
