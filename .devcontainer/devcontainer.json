@@ -8,14 +8,14 @@
 
 	
 	//User prebuilt image from dockerhub
-	"image": "uprev/esp32:5.0-dev",
+	"image": "uprev/esp32:5.0",
 
 
 	// OR Build locally
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "args": {
-    //         "IDF_CLONE_BRANCH_OR_TAG":"v5.0-dev"
+    //         "IDF_CLONE_BRANCH_OR_TAG":"v5.0"
     //     }
     // },
 

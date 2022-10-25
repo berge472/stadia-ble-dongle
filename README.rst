@@ -18,7 +18,8 @@ This project contains a devcontainer configuration. If you have docker installed
 
 .. code:: bash 
 
-    make 
+    idf.py set-target esp32s3 
+    idf.py build 
 
 
 Flashing

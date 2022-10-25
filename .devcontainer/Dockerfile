@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 as esp32_devstage
+FROM ubuntu:20.04 as esp32_devstage
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -65,6 +65,9 @@ RUN echo IDF_CHECKOUT_REF=$IDF_CHECKOUT_REF IDF_CLONE_BRANCH_OR_TAG=$IDF_CLONE_B
       git checkout $IDF_CHECKOUT_REF && \
       git submodule update --init --recursive; \
     fi
+
+
+RUN apt-get update && apt-get install -y python3.8-venv
 
 # Install all the required tools, plus CMake
 RUN $IDF_PATH/tools/idf_tools.py --non-interactive install required \
